@@ -1,69 +1,112 @@
-import json
-from pathlib import Path
-import pytest
-
-from engine.optimizer import solve_regular_round, solve_profile_round, solve_replacement
-
-ROOT = Path(__file__).parents[1]
+from engine.optimizer import solve_round, re_place_student
 
 
-def load(name):
-    return json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
-
-
-def test_regular_places_everyone_when_capacity_exists():
-    result = solve_regular_round(load("test_regular.json"))
-    assert result["placed"] == 6
-
-
-def test_unique_school_is_protected_by_global_optimization():
-    result = solve_regular_round(load("test_regular.json"))
-    mapping = {p["student_id"]: p["school_id"] for p in result["placements"]}
-    assert mapping["STU-002"] == "SCH-A"
-
-
-def test_block_is_never_violated():
-    result = solve_regular_round(load("test_regular.json"))
-    mapping = {p["student_id"]: p["school_id"] for p in result["placements"]}
-    assert mapping["STU-004"] != "SCH-C"
-
-
-def test_bike_30_or_less_counts_as_normal():
-    result = solve_regular_round(load("test_regular.json"))
-    p = next(p for p in result["placements"] if p["student_id"] == "STU-004")
-    assert p["normal_reachability"] is True
-
-
-def test_bad_route_is_human_review_not_hard_rejection():
-    result = solve_regular_round(load("test_regular.json"))
-    p = next(p for p in result["placements"] if p["student_id"] == "STU-006")
-    assert p["school_id"] == "SCH-D"
-    assert p["human_review"] is True
-    assert p["review_reason"] == "OV>60_AND_BIKE>30"
-
-
-def test_profile_capacity_and_blocking():
-    result = solve_profile_round(load("test_profiles.json"))
-    assert result["placed"] == 4
-    p3 = [p for p in result["placements"] if p["student_id"] == "STU-P03"]
-    assert len(p3) == 1
-    assert p3[0]["school_id"] == "SCH-Z"
-
-
-def test_max_two_profiles_per_semester():
-    data = load("test_profiles.json")
-    data["student_profiles"].append({"student_id":"STU-P01","semester":"S1","profile_id":"PROF-03","active":True})
-    with pytest.raises(ValueError):
-        solve_profile_round(data)
-
-
-def test_replacement_does_not_move_other_students():
-    data = load("test_regular.json")
-    data["current_placements"] = [
-        {"student_id":"STU-002","school_id":"SCH-A","active":True},
-        {"student_id":"STU-003","school_id":"SCH-B","active":True}
+def test_global_solver_protects_student_with_one_option():
+    students = [
+        {"id": "A", "category": "J4"},
+        {"id": "B", "category": "J4"},
     ]
-    result = solve_replacement(data, "STU-001")
-    assert result["mode"] == "replacement"
-    if result["placements"]:
-        assert result["placements"][0]["school_id"] != "SCH-A"
+
+    schools = [
+        {"id": "X", "capacity": {"J4": 1}},
+        {"id": "Y", "capacity": {"J4": 1}},
+    ]
+
+    routes = {
+        ("A", "X"): {"ov": 20, "bike": 20},
+        ("A", "Y"): {"ov": 25, "bike": 25},
+        ("B", "X"): {"ov": 30, "bike": 35},
+    }
+
+    result = solve_round(
+        students=students,
+        schools=schools,
+        routes=routes,
+        blocks=set(),
+        category="J4",
+    )
+
+    placements = {
+        placement["student"]: placement["school"]
+        for placement in result["placements"]
+    }
+
+    assert placements["B"] == "X"
+    assert placements["A"] == "Y"
+
+
+def test_hard_block_is_never_used():
+    students = [
+        {"id": "A", "category": "J2"},
+    ]
+
+    schools = [
+        {"id": "X", "capacity": {"J2": 1}},
+        {"id": "Y", "capacity": {"J2": 1}},
+    ]
+
+    routes = {
+        ("A", "X"): {"ov": 10, "bike": 10},
+        ("A", "Y"): {"ov": 20, "bike": 20},
+    }
+
+    result = solve_round(
+        students=students,
+        schools=schools,
+        routes=routes,
+        blocks={("A", "X")},
+        category="J2",
+    )
+
+    assert result["placements"][0]["school"] == "Y"
+
+
+def test_bad_travel_goes_to_human_review():
+    students = [
+        {"id": "A", "category": "J1"},
+    ]
+
+    schools = [
+        {"id": "X", "capacity": {"J1": 1}},
+    ]
+
+    routes = {
+        ("A", "X"): {"ov": 72, "bike": 42},
+    }
+
+    result = solve_round(
+        students=students,
+        schools=schools,
+        routes=routes,
+        blocks=set(),
+        category="J1",
+    )
+
+    assert result["placements"][0]["human_review"] is True
+
+
+def test_replacement_uses_remaining_capacity():
+    student = {
+        "id": "A",
+        "category": "LANG",
+    }
+
+    schools = [
+        {"id": "X", "capacity": {"LANG": 0}},
+        {"id": "Y", "capacity": {"LANG": 1}},
+    ]
+
+    routes = {
+        ("A", "X"): {"ov": 20, "bike": 20},
+        ("A", "Y"): {"ov": 35, "bike": 28},
+    }
+
+    result = re_place_student(
+        student=student,
+        schools=schools,
+        routes=routes,
+        blocks=set(),
+        category="LANG",
+    )
+
+    assert result["placements"][0]["school"] == "Y"
