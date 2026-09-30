@@ -1,47 +1,77 @@
-# StagePlaatser Engine v0.2
+# StagePlaatser Engine v0.3
 
-Proof-of-concept voor de dNP-stageplaatsingspuzzel met Python + Google OR-Tools CP-SAT.
+Werkende proof-of-concept voor de dNP-stageplaatsingspuzzel met Python + Google OR-Tools CP-SAT.
 
-## Wat v0.2 kan
+## Nieuw in v0.3
 
-- Reguliere rondes: **J4, LANG, J2, J1** (geen reguliere J3).
-- Globale optimalisatie: maximaal aantal studenten plaatsen vóór reistijdoptimalisatie.
-- Harde student-schoolblokkades.
-- Schoolcapaciteit per reguliere ronde.
-- OV <= 60 minuten **of** fiets <= 30 minuten = normale bereikbaarheid.
-- Slechtere bereikbaarheid wordt niet hard afgekeurd, maar gemarkeerd voor Human Review.
-- Strategische schaarste wordt meegewogen bij gelijkwaardige oplossingen.
-- Profileringsronde per semester (S1/S2), met capaciteit per school + profilering.
-- Maximaal 2 profileringen per student per semester.
-- Herplaatsing van één student zonder andere bestaande plaatsingen te verschuiven.
-- JSON in / JSON uit; daardoor later geschikt voor Azure Function, SharePoint of Power Apps.
+Naast de v0.2-engine bevat deze versie een **zichtbare fictieve simulatie**:
+
+- 50 fictieve studenten;
+- 12 fictieve scholen;
+- rondevolgorde **J4 -> Langstudeerders -> Profilering S1/S2 -> J2 -> J1**;
+- geen reguliere Jaar 3;
+- 8 profileringen;
+- maximaal 2 profileringen per student per semester;
+- harde student-schoolblokkades;
+- fictieve OV- en fietstijden;
+- OV <= 60 minuten of fiets <= 30 minuten = normaal bereikbaar;
+- slechtere bereikbaarheid blijft mogelijk, maar gaat naar **Human Review**;
+- globale optimalisatie in plaats van greedy dichtstbijzijnde-schoollogica;
+- strategische schaarste/reservecapaciteit zichtbaar in de output;
+- resterende capaciteit en niet-geplaatste studenten;
+- JSON-output, leesbaar tekstverslag én statisch HTML-dashboard;
+- herplaatsingsfunctie uit v0.2 blijft aanwezig.
+
+Alle studenten, scholen, blokkades en reistijden in de simulatie zijn fictief.
 
 ## Installeren
 
-Python 3.11 of 3.12 aanbevolen.
-
 ```bash
-python -m venv .venv
-# Windows:
-.venv\\Scripts\\activate
-# macOS/Linux:
-source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Tests uitvoeren
+## Tests
+
+Gebruik in GitHub Codespaces bij voorkeur:
+
+```bash
+python -m pytest -q
+```
+
+Door `pytest.ini` hoort ook dit nu te werken:
 
 ```bash
 pytest -q
 ```
 
-## Reguliere test draaien
+## De fictieve simulatie draaien
+
+```bash
+python -m engine.simulation
+```
+
+Daarna staan ook deze bestanden klaar:
+
+```text
+output/simulation.json
+output/simulation.txt
+output/simulation.html
+output/simulation.html
+```
+
+Een andere vaste seed gebruiken:
+
+```bash
+python -m engine.simulation --seed 12345
+```
+
+## Een losse reguliere ronde oplossen
 
 ```bash
 python -m engine.optimizer data/test_regular.json --output output/regular_result.json
 ```
 
-## Profileringstest draaien
+## Een losse profileringsronde oplossen
 
 ```bash
 python -m engine.optimizer data/test_profiles.json --output output/profile_result.json
@@ -49,16 +79,20 @@ python -m engine.optimizer data/test_profiles.json --output output/profile_resul
 
 ## Belangrijke ontwerpregels
 
-- Een blokkade is hard en kan nooit door de optimizer worden genegeerd.
-- Een route boven 60 minuten OV en boven 30 minuten fiets blijft technisch mogelijk, maar vraagt Human Review.
-- Plaatsingsaantal heeft hogere prioriteit dan reistijd. Een student kan dus bewust iets verder reizen zodat een andere student niet onplaatsbaar wordt.
-- Profilering gebruikt aanvullende capaciteit en staat los van J1/J2/J4/LANG.
-- Namen, e-mailadressen en redenen van blokkades horen niet in de engine-input.
+1. Plaats zo veel mogelijk studenten.
+2. Geef normale bereikbaarheid voorrang.
+3. Beperk reistijd daarna zo veel mogelijk.
+4. Houd rekening met schaarste, zodat een flexibele student niet onnodig de enige optie van een inflexibele student inneemt.
+5. Een actieve blokkade is absoluut: die combinatie wordt nooit voorgesteld.
+6. Een route buiten de normale OV/fietsgrens is geen automatische afwijzing; deze wordt gemarkeerd voor Human Review.
+7. Profilering heeft aanvullende capaciteit en staat los van reguliere capaciteit.
+8. Namen, e-mailadressen en interne redenen voor blokkades horen niet in de optimizer-input.
 
-## Nog niet in v0.2
+## Nog niet productie-klaar
 
-- Echte OV/fiets-route-API.
-- Aankomsttijd 08:00/08:15 uit dienstregelingen.
-- SharePoint/Forms/Power Automate-koppeling.
-- Azure Function wrapper.
-- Productie-authenticatie en auditlogging.
+- echte OV/fiets-route-API;
+- aankomsttijd 08:00/08:15 uit actuele dienstregelingen;
+- SharePoint/Forms/Power Automate-koppeling;
+- Azure Function wrapper;
+- authenticatie, autorisaties en volledig auditlog;
+- definitieve menselijke goedkeuringsworkflow.

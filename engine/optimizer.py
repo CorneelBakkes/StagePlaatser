@@ -185,7 +185,7 @@ def solve_regular_round(payload: dict[str, Any]) -> dict[str, Any]:
     )
 
     return {
-        "engine_version": "0.2",
+        "engine_version": "0.3",
         "status": _status_name(status),
         "round": round_type,
         "total_students": len(students),
@@ -396,7 +396,7 @@ def solve_profile_round(payload: dict[str, Any]) -> dict[str, Any]:
         })
 
     return {
-        "engine_version": "0.2",
+        "engine_version": "0.3",
         "status": _status_name(status),
         "round": PROFILE_ROUND,
         "semester": semester,
@@ -444,7 +444,7 @@ def solve_file(input_path: str | Path, output_path: str | Path | None = None) ->
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="StagePlaatser Engine v0.2")
+    parser = argparse.ArgumentParser(description="StagePlaatser Engine v0.3")
     parser.add_argument("input", help="JSON input file")
     parser.add_argument("--output", default="output/result.json")
     args = parser.parse_args()
