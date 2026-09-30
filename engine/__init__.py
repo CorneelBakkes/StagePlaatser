@@ -1,0 +1,1 @@
+"""Stagepuzzel placement engine."""
