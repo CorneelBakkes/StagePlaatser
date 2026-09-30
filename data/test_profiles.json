@@ -1,0 +1,36 @@
+{
+  "round":"PROF",
+  "semester":"S1",
+  "students":[
+    {"student_id":"STU-P01","active":true},
+    {"student_id":"STU-P02","active":true},
+    {"student_id":"STU-P03","active":true}
+  ],
+  "schools":[
+    {"school_id":"SCH-X","active":true},
+    {"school_id":"SCH-Y","active":true},
+    {"school_id":"SCH-Z","active":true}
+  ],
+  "student_profiles":[
+    {"student_id":"STU-P01","semester":"S1","profile_id":"PROF-01","active":true},
+    {"student_id":"STU-P01","semester":"S1","profile_id":"PROF-02","active":true},
+    {"student_id":"STU-P02","semester":"S1","profile_id":"PROF-01","active":true},
+    {"student_id":"STU-P03","semester":"S1","profile_id":"PROF-02","active":true}
+  ],
+  "profile_capacity":[
+    {"school_id":"SCH-X","semester":"S1","profile_id":"PROF-01","capacity":1,"active":true},
+    {"school_id":"SCH-X","semester":"S1","profile_id":"PROF-02","capacity":1,"active":true},
+    {"school_id":"SCH-Y","semester":"S1","profile_id":"PROF-01","capacity":1,"active":true},
+    {"school_id":"SCH-Z","semester":"S1","profile_id":"PROF-02","capacity":1,"active":true}
+  ],
+  "blocks":[{"student_id":"STU-P03","school_id":"SCH-X","active":true}],
+  "routes":[
+    {"student_id":"STU-P01","school_id":"SCH-X","ov_minutes":22,"bike_minutes":31},
+    {"student_id":"STU-P01","school_id":"SCH-Y","ov_minutes":35,"bike_minutes":44},
+    {"student_id":"STU-P01","school_id":"SCH-Z","ov_minutes":40,"bike_minutes":39},
+    {"student_id":"STU-P02","school_id":"SCH-X","ov_minutes":25,"bike_minutes":35},
+    {"student_id":"STU-P02","school_id":"SCH-Y","ov_minutes":50,"bike_minutes":45},
+    {"student_id":"STU-P03","school_id":"SCH-X","ov_minutes":20,"bike_minutes":20},
+    {"student_id":"STU-P03","school_id":"SCH-Z","ov_minutes":55,"bike_minutes":29}
+  ]
+}

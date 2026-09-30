@@ -1,0 +1,33 @@
+{
+  "round": "J4",
+  "max_solve_seconds": 10,
+  "students": [
+    {"student_id":"STU-001","category":"J4","active":true},
+    {"student_id":"STU-002","category":"J4","active":true},
+    {"student_id":"STU-003","category":"J4","active":true},
+    {"student_id":"STU-004","category":"J4","active":true},
+    {"student_id":"STU-005","category":"J4","active":true},
+    {"student_id":"STU-006","category":"J4","active":true}
+  ],
+  "schools": [
+    {"school_id":"SCH-A","capacity_j1":0,"capacity_j2":0,"capacity_j4":1,"capacity_lang":0,"active":true},
+    {"school_id":"SCH-B","capacity_j1":0,"capacity_j2":0,"capacity_j4":2,"capacity_lang":0,"active":true},
+    {"school_id":"SCH-C","capacity_j1":0,"capacity_j2":0,"capacity_j4":2,"capacity_lang":0,"active":true},
+    {"school_id":"SCH-D","capacity_j1":0,"capacity_j2":0,"capacity_j4":1,"capacity_lang":0,"active":true}
+  ],
+  "blocks": [{"student_id":"STU-004","school_id":"SCH-C","active":true}],
+  "routes": [
+    {"student_id":"STU-001","school_id":"SCH-A","ov_minutes":20,"bike_minutes":35},
+    {"student_id":"STU-001","school_id":"SCH-B","ov_minutes":31,"bike_minutes":38},
+    {"student_id":"STU-001","school_id":"SCH-C","ov_minutes":42,"bike_minutes":45},
+    {"student_id":"STU-002","school_id":"SCH-A","ov_minutes":24,"bike_minutes":36},
+    {"student_id":"STU-003","school_id":"SCH-A","ov_minutes":27,"bike_minutes":40},
+    {"student_id":"STU-003","school_id":"SCH-B","ov_minutes":29,"bike_minutes":33},
+    {"student_id":"STU-004","school_id":"SCH-A","ov_minutes":55,"bike_minutes":34},
+    {"student_id":"STU-004","school_id":"SCH-B","ov_minutes":65,"bike_minutes":24},
+    {"student_id":"STU-004","school_id":"SCH-C","ov_minutes":25,"bike_minutes":20},
+    {"student_id":"STU-005","school_id":"SCH-B","ov_minutes":75,"bike_minutes":45},
+    {"student_id":"STU-005","school_id":"SCH-C","ov_minutes":58,"bike_minutes":50},
+    {"student_id":"STU-006","school_id":"SCH-D","ov_minutes":68,"bike_minutes":41}
+  ]
+}

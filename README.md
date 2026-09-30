@@ -1,32 +1,64 @@
-# Stagepuzzel Engine v0.1
+# StagePlaatser Engine v0.2
 
-Proof-of-concept placement engine for Pabo stage placements.
+Proof-of-concept voor de dNP-stageplaatsingspuzzel met Python + Google OR-Tools CP-SAT.
 
-## Current scope
+## Wat v0.2 kan
 
-- OR-Tools CP-SAT optimizer
-- regular rounds: J4, LANG, J2, J1
-- hard student-school blocks
-- capacity constraints
-- OV <= 60 minutes OR bicycle <= 30 minutes counts as normal reachability
-- maximizes number of placements first, then normal reachability, then travel time
-- reports human-review placements, unplaced students, remaining capacity and strategic reserve candidates
-- no personal data required
+- Reguliere rondes: **J4, LANG, J2, J1** (geen reguliere J3).
+- Globale optimalisatie: maximaal aantal studenten plaatsen vóór reistijdoptimalisatie.
+- Harde student-schoolblokkades.
+- Schoolcapaciteit per reguliere ronde.
+- OV <= 60 minuten **of** fiets <= 30 minuten = normale bereikbaarheid.
+- Slechtere bereikbaarheid wordt niet hard afgekeurd, maar gemarkeerd voor Human Review.
+- Strategische schaarste wordt meegewogen bij gelijkwaardige oplossingen.
+- Profileringsronde per semester (S1/S2), met capaciteit per school + profilering.
+- Maximaal 2 profileringen per student per semester.
+- Herplaatsing van één student zonder andere bestaande plaatsingen te verschuiven.
+- JSON in / JSON uit; daardoor later geschikt voor Azure Function, SharePoint of Power Apps.
 
-Profiling (S1/S2, 8 profiles, max 2/student/semester) is the next engine module; it is deliberately separate from regular J4/J2/J1/LANG capacity.
+## Installeren
 
-## Run locally
+Python 3.11 of 3.12 aanbevolen.
 
 ```bash
-python -m pip install -r requirements.txt
-python -m engine.optimizer data/testdata.json --output output/result.json
+python -m venv .venv
+# Windows:
+.venv\\Scripts\\activate
+# macOS/Linux:
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Tests uitvoeren
+
+```bash
 pytest -q
 ```
 
-## GitHub
+## Reguliere test draaien
 
-Create an empty repository and copy the contents of this folder into it. The engine does not depend on GitHub and can later be deployed unchanged behind an Azure Function/API.
+```bash
+python -m engine.optimizer data/test_regular.json --output output/regular_result.json
+```
 
-## Input/output
+## Profileringstest draaien
 
-The proof-of-concept consumes JSON. Route times are currently supplied as test data. The next engine will generate these through a real routing provider and cache the results.
+```bash
+python -m engine.optimizer data/test_profiles.json --output output/profile_result.json
+```
+
+## Belangrijke ontwerpregels
+
+- Een blokkade is hard en kan nooit door de optimizer worden genegeerd.
+- Een route boven 60 minuten OV en boven 30 minuten fiets blijft technisch mogelijk, maar vraagt Human Review.
+- Plaatsingsaantal heeft hogere prioriteit dan reistijd. Een student kan dus bewust iets verder reizen zodat een andere student niet onplaatsbaar wordt.
+- Profilering gebruikt aanvullende capaciteit en staat los van J1/J2/J4/LANG.
+- Namen, e-mailadressen en redenen van blokkades horen niet in de engine-input.
+
+## Nog niet in v0.2
+
+- Echte OV/fiets-route-API.
+- Aankomsttijd 08:00/08:15 uit dienstregelingen.
+- SharePoint/Forms/Power Automate-koppeling.
+- Azure Function wrapper.
+- Productie-authenticatie en auditlogging.
