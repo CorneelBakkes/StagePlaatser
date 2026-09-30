@@ -98,7 +98,48 @@ def build_demo(seed: int = 42):
         ("STU-025", "SCH-003"),
         ("STU-040", "SCH-004"),
     }
+    # ---------------------------------------------------------
+    # Bewuste testgevallen voor de simulatie
+    # ---------------------------------------------------------
 
+    # 1. Human Review:
+    # STU-014 heeft nog maar één mogelijke school en die route
+    # is zowel met OV als fiets buiten de normale grens.
+    for school in schools:
+        routes.pop(("STU-014", school["id"]), None)
+
+    routes[("STU-014", "SCH-008")] = {
+        "ov": 68,
+        "bike": 41,
+    }
+
+    # 2. Slechts één geldige school:
+    # STU-003 kan alleen naar SCH-007.
+    for school in schools:
+        if school["id"] != "SCH-007":
+            routes.pop(("STU-003", school["id"]), None)
+
+    routes[("STU-003", "SCH-007")] = {
+        "ov": 52,
+        "bike": 34,
+    }
+
+    # 3. Beste school hard geblokkeerd:
+    # STU-027 heeft een hele goede route naar SCH-004,
+    # maar die combinatie mag niet gebruikt worden.
+    routes[("STU-027", "SCH-004")] = {
+        "ov": 18,
+        "bike": 12,
+    }
+
+    blocks.add(
+        ("STU-027", "SCH-004")
+    )
+
+    # 4. Helemaal niet plaatsbaar:
+    # STU-044 krijgt bewust geen enkele route.
+    for school in schools:
+        routes.pop(("STU-044", school["id"]), None)
     profiles = [
         f"PROF-{i:02}"
         for i in range(1, 9)

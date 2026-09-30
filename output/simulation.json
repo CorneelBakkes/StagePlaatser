@@ -1,0 +1,843 @@
+{
+  "summary": {
+    "students": 50,
+    "schools": 12,
+    "regular_placements": 39,
+    "regular_unplaced": 1,
+    "profile_requests": 32,
+    "profile_placements": 32,
+    "profile_unplaced": 0,
+    "human_review": 1
+  },
+  "rounds": {
+    "J4": {
+      "category": "J4",
+      "placements": [
+        {
+          "student": "STU-001",
+          "school": "SCH-001",
+          "ov": 48,
+          "bike": 39,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 1
+        },
+        {
+          "student": "STU-002",
+          "school": "SCH-004",
+          "ov": 74,
+          "bike": 18,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-003",
+          "school": "SCH-007",
+          "ov": 52,
+          "bike": 34,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 1
+        },
+        {
+          "student": "STU-004",
+          "school": "SCH-009",
+          "ov": 30,
+          "bike": 46,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 8
+        },
+        {
+          "student": "STU-005",
+          "school": "SCH-008",
+          "ov": 39,
+          "bike": 15,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        },
+        {
+          "student": "STU-006",
+          "school": "SCH-004",
+          "ov": 37,
+          "bike": 21,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-007",
+          "school": "SCH-012",
+          "ov": 28,
+          "bike": 18,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 8
+        },
+        {
+          "student": "STU-008",
+          "school": "SCH-002",
+          "ov": 57,
+          "bike": 20,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-009",
+          "school": "SCH-001",
+          "ov": 73,
+          "bike": 19,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        },
+        {
+          "student": "STU-010",
+          "school": "SCH-003",
+          "ov": 46,
+          "bike": 28,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        }
+      ],
+      "unplaced": [],
+      "remaining_capacity": {
+        "SCH-001": 0,
+        "SCH-002": 1,
+        "SCH-003": 1,
+        "SCH-004": 0,
+        "SCH-005": 0,
+        "SCH-006": 0,
+        "SCH-007": 1,
+        "SCH-008": 1,
+        "SCH-009": 1,
+        "SCH-010": 0,
+        "SCH-011": 0,
+        "SCH-012": 0
+      }
+    },
+    "LANG": {
+      "category": "LANG",
+      "placements": [
+        {
+          "student": "STU-011",
+          "school": "SCH-001",
+          "ov": 82,
+          "bike": 24,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        },
+        {
+          "student": "STU-012",
+          "school": "SCH-012",
+          "ov": 41,
+          "bike": 17,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-013",
+          "school": "SCH-009",
+          "ov": 67,
+          "bike": 22,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-014",
+          "school": "SCH-008",
+          "ov": 68,
+          "bike": 41,
+          "normal_reachable": false,
+          "human_review": true,
+          "review_reason": "OV > 60 minuten en fiets > 30 minuten",
+          "alternative_count": 1
+        },
+        {
+          "student": "STU-015",
+          "school": "SCH-002",
+          "ov": 64,
+          "bike": 19,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        }
+      ],
+      "unplaced": [],
+      "remaining_capacity": {
+        "SCH-001": 0,
+        "SCH-002": 0,
+        "SCH-003": 0,
+        "SCH-004": 0,
+        "SCH-005": 0,
+        "SCH-006": 0,
+        "SCH-007": 1,
+        "SCH-008": 0,
+        "SCH-009": 0,
+        "SCH-010": 0,
+        "SCH-011": 1,
+        "SCH-012": 0
+      }
+    },
+    "PROF": {
+      "placements": [
+        {
+          "student": "STU-016",
+          "semester": "S1",
+          "profile": "PROF-06",
+          "school": "SCH-004",
+          "ov": 35,
+          "bike": 45,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-016",
+          "semester": "S1",
+          "profile": "PROF-05",
+          "school": "SCH-005",
+          "ov": 73,
+          "bike": 30,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-016",
+          "semester": "S2",
+          "profile": "PROF-02",
+          "school": "SCH-010",
+          "ov": 30,
+          "bike": 23,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-017",
+          "semester": "S1",
+          "profile": "PROF-02",
+          "school": "SCH-005",
+          "ov": 25,
+          "bike": 37,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-017",
+          "semester": "S1",
+          "profile": "PROF-07",
+          "school": "SCH-001",
+          "ov": 59,
+          "bike": 44,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-017",
+          "semester": "S2",
+          "profile": "PROF-05",
+          "school": "SCH-001",
+          "ov": 59,
+          "bike": 44,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-018",
+          "semester": "S1",
+          "profile": "PROF-03",
+          "school": "SCH-003",
+          "ov": 61,
+          "bike": 16,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-018",
+          "semester": "S1",
+          "profile": "PROF-07",
+          "school": "SCH-009",
+          "ov": 30,
+          "bike": 45,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-018",
+          "semester": "S2",
+          "profile": "PROF-02",
+          "school": "SCH-003",
+          "ov": 61,
+          "bike": 16,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-018",
+          "semester": "S2",
+          "profile": "PROF-08",
+          "school": "SCH-003",
+          "ov": 61,
+          "bike": 16,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-019",
+          "semester": "S1",
+          "profile": "PROF-06",
+          "school": "SCH-006",
+          "ov": 63,
+          "bike": 22,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-019",
+          "semester": "S1",
+          "profile": "PROF-01",
+          "school": "SCH-010",
+          "ov": 70,
+          "bike": 27,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-019",
+          "semester": "S2",
+          "profile": "PROF-01",
+          "school": "SCH-012",
+          "ov": 65,
+          "bike": 30,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-019",
+          "semester": "S2",
+          "profile": "PROF-04",
+          "school": "SCH-010",
+          "ov": 70,
+          "bike": 27,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-020",
+          "semester": "S1",
+          "profile": "PROF-04",
+          "school": "SCH-006",
+          "ov": 25,
+          "bike": 41,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-020",
+          "semester": "S1",
+          "profile": "PROF-08",
+          "school": "SCH-007",
+          "ov": 31,
+          "bike": 42,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-020",
+          "semester": "S2",
+          "profile": "PROF-06",
+          "school": "SCH-002",
+          "ov": 63,
+          "bike": 22,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-021",
+          "semester": "S1",
+          "profile": "PROF-01",
+          "school": "SCH-009",
+          "ov": 42,
+          "bike": 50,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-021",
+          "semester": "S2",
+          "profile": "PROF-02",
+          "school": "SCH-002",
+          "ov": 40,
+          "bike": 20,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-021",
+          "semester": "S2",
+          "profile": "PROF-07",
+          "school": "SCH-002",
+          "ov": 40,
+          "bike": 20,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-022",
+          "semester": "S1",
+          "profile": "PROF-03",
+          "school": "SCH-003",
+          "ov": 30,
+          "bike": 33,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-022",
+          "semester": "S1",
+          "profile": "PROF-02",
+          "school": "SCH-002",
+          "ov": 56,
+          "bike": 43,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-022",
+          "semester": "S2",
+          "profile": "PROF-05",
+          "school": "SCH-004",
+          "ov": 69,
+          "bike": 30,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-023",
+          "semester": "S1",
+          "profile": "PROF-03",
+          "school": "SCH-002",
+          "ov": 31,
+          "bike": 27,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-023",
+          "semester": "S1",
+          "profile": "PROF-07",
+          "school": "SCH-003",
+          "ov": 48,
+          "bike": 26,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-023",
+          "semester": "S2",
+          "profile": "PROF-08",
+          "school": "SCH-008",
+          "ov": 25,
+          "bike": 51,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-023",
+          "semester": "S2",
+          "profile": "PROF-05",
+          "school": "SCH-005",
+          "ov": 27,
+          "bike": 18,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-024",
+          "semester": "S1",
+          "profile": "PROF-02",
+          "school": "SCH-002",
+          "ov": 28,
+          "bike": 24,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-024",
+          "semester": "S2",
+          "profile": "PROF-05",
+          "school": "SCH-005",
+          "ov": 51,
+          "bike": 53,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-025",
+          "semester": "S1",
+          "profile": "PROF-03",
+          "school": "SCH-001",
+          "ov": 36,
+          "bike": 50,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-025",
+          "semester": "S2",
+          "profile": "PROF-02",
+          "school": "SCH-012",
+          "ov": 29,
+          "bike": 18,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        },
+        {
+          "student": "STU-025",
+          "semester": "S2",
+          "profile": "PROF-07",
+          "school": "SCH-005",
+          "ov": 39,
+          "bike": 33,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null
+        }
+      ],
+      "unplaced": []
+    },
+    "J2": {
+      "category": "J2",
+      "placements": [
+        {
+          "student": "STU-026",
+          "school": "SCH-003",
+          "ov": 54,
+          "bike": 34,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-027",
+          "school": "SCH-010",
+          "ov": 77,
+          "bike": 15,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        },
+        {
+          "student": "STU-028",
+          "school": "SCH-002",
+          "ov": 73,
+          "bike": 18,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-029",
+          "school": "SCH-003",
+          "ov": 33,
+          "bike": 19,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-030",
+          "school": "SCH-006",
+          "ov": 27,
+          "bike": 23,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 5
+        },
+        {
+          "student": "STU-031",
+          "school": "SCH-009",
+          "ov": 72,
+          "bike": 20,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-032",
+          "school": "SCH-004",
+          "ov": 61,
+          "bike": 26,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        },
+        {
+          "student": "STU-033",
+          "school": "SCH-001",
+          "ov": 52,
+          "bike": 31,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        },
+        {
+          "student": "STU-034",
+          "school": "SCH-006",
+          "ov": 33,
+          "bike": 20,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-035",
+          "school": "SCH-001",
+          "ov": 54,
+          "bike": 19,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-036",
+          "school": "SCH-002",
+          "ov": 27,
+          "bike": 17,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-037",
+          "school": "SCH-004",
+          "ov": 32,
+          "bike": 44,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        }
+      ],
+      "unplaced": [],
+      "remaining_capacity": {
+        "SCH-001": 0,
+        "SCH-002": 0,
+        "SCH-003": 0,
+        "SCH-004": 0,
+        "SCH-005": 0,
+        "SCH-006": 0,
+        "SCH-007": 0,
+        "SCH-008": 0,
+        "SCH-009": 0,
+        "SCH-010": 0,
+        "SCH-011": 0,
+        "SCH-012": 0
+      }
+    },
+    "J1": {
+      "category": "J1",
+      "placements": [
+        {
+          "student": "STU-038",
+          "school": "SCH-002",
+          "ov": 76,
+          "bike": 26,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-039",
+          "school": "SCH-001",
+          "ov": 66,
+          "bike": 16,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        },
+        {
+          "student": "STU-040",
+          "school": "SCH-011",
+          "ov": 60,
+          "bike": 18,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-041",
+          "school": "SCH-003",
+          "ov": 71,
+          "bike": 18,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 8
+        },
+        {
+          "student": "STU-042",
+          "school": "SCH-007",
+          "ov": 29,
+          "bike": 24,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        },
+        {
+          "student": "STU-043",
+          "school": "SCH-002",
+          "ov": 64,
+          "bike": 18,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 6
+        },
+        {
+          "student": "STU-045",
+          "school": "SCH-012",
+          "ov": 63,
+          "bike": 24,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 8
+        },
+        {
+          "student": "STU-046",
+          "school": "SCH-001",
+          "ov": 66,
+          "bike": 19,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 8
+        },
+        {
+          "student": "STU-047",
+          "school": "SCH-003",
+          "ov": 60,
+          "bike": 17,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 8
+        },
+        {
+          "student": "STU-048",
+          "school": "SCH-009",
+          "ov": 70,
+          "bike": 20,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        },
+        {
+          "student": "STU-049",
+          "school": "SCH-004",
+          "ov": 33,
+          "bike": 24,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 8
+        },
+        {
+          "student": "STU-050",
+          "school": "SCH-012",
+          "ov": 41,
+          "bike": 18,
+          "normal_reachable": true,
+          "human_review": false,
+          "review_reason": null,
+          "alternative_count": 7
+        }
+      ],
+      "unplaced": [
+        "STU-044"
+      ],
+      "remaining_capacity": {
+        "SCH-001": 0,
+        "SCH-002": 0,
+        "SCH-003": 0,
+        "SCH-004": 0,
+        "SCH-005": 0,
+        "SCH-006": 0,
+        "SCH-007": 0,
+        "SCH-008": 0,
+        "SCH-009": 0,
+        "SCH-010": 0,
+        "SCH-011": 0,
+        "SCH-012": 0
+      }
+    }
+  }
+}

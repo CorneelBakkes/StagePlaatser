@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>StagePlaatser v0.3</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.number {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+</style>
+</head>
+<body>
+
+<h1>StagePlaatser v0.3</h1>
+<p>Proof of concept met fictieve gegevens.</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="number">
+50
+</div>
+studenten
+</div>
+
+<div class="card">
+<div class="number">
+12
+</div>
+scholen
+</div>
+
+<div class="card">
+<div class="number">
+39
+</div>
+regulier geplaatst
+</div>
+
+<div class="card">
+<div class="number">
+32
+</div>
+profileringsplaatsen
+</div>
+
+<div class="card">
+<div class="number">
+1
+</div>
+Human Review
+</div>
+
+</div>
+
+<table>
+
+<thead>
+<tr>
+<th>Ronde</th>
+<th>Student</th>
+<th>School</th>
+<th>OV</th>
+<th>Fiets</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+<tr><td>J4</td><td>STU-001</td><td>SCH-001</td><td>48</td><td>39</td><td>OK</td></tr><tr><td>J4</td><td>STU-002</td><td>SCH-004</td><td>74</td><td>18</td><td>OK</td></tr><tr><td>J4</td><td>STU-003</td><td>SCH-007</td><td>52</td><td>34</td><td>OK</td></tr><tr><td>J4</td><td>STU-004</td><td>SCH-009</td><td>30</td><td>46</td><td>OK</td></tr><tr><td>J4</td><td>STU-005</td><td>SCH-008</td><td>39</td><td>15</td><td>OK</td></tr><tr><td>J4</td><td>STU-006</td><td>SCH-004</td><td>37</td><td>21</td><td>OK</td></tr><tr><td>J4</td><td>STU-007</td><td>SCH-012</td><td>28</td><td>18</td><td>OK</td></tr><tr><td>J4</td><td>STU-008</td><td>SCH-002</td><td>57</td><td>20</td><td>OK</td></tr><tr><td>J4</td><td>STU-009</td><td>SCH-001</td><td>73</td><td>19</td><td>OK</td></tr><tr><td>J4</td><td>STU-010</td><td>SCH-003</td><td>46</td><td>28</td><td>OK</td></tr><tr><td>LANG</td><td>STU-011</td><td>SCH-001</td><td>82</td><td>24</td><td>OK</td></tr><tr><td>LANG</td><td>STU-012</td><td>SCH-012</td><td>41</td><td>17</td><td>OK</td></tr><tr><td>LANG</td><td>STU-013</td><td>SCH-009</td><td>67</td><td>22</td><td>OK</td></tr><tr><td>LANG</td><td>STU-014</td><td>SCH-008</td><td>68</td><td>41</td><td>Human Review</td></tr><tr><td>LANG</td><td>STU-015</td><td>SCH-002</td><td>64</td><td>19</td><td>OK</td></tr><tr><td>PROF</td><td>STU-016</td><td>SCH-004</td><td>35</td><td>45</td><td>OK</td></tr><tr><td>PROF</td><td>STU-016</td><td>SCH-005</td><td>73</td><td>30</td><td>OK</td></tr><tr><td>PROF</td><td>STU-016</td><td>SCH-010</td><td>30</td><td>23</td><td>OK</td></tr><tr><td>PROF</td><td>STU-017</td><td>SCH-005</td><td>25</td><td>37</td><td>OK</td></tr><tr><td>PROF</td><td>STU-017</td><td>SCH-001</td><td>59</td><td>44</td><td>OK</td></tr><tr><td>PROF</td><td>STU-017</td><td>SCH-001</td><td>59</td><td>44</td><td>OK</td></tr><tr><td>PROF</td><td>STU-018</td><td>SCH-003</td><td>61</td><td>16</td><td>OK</td></tr><tr><td>PROF</td><td>STU-018</td><td>SCH-009</td><td>30</td><td>45</td><td>OK</td></tr><tr><td>PROF</td><td>STU-018</td><td>SCH-003</td><td>61</td><td>16</td><td>OK</td></tr><tr><td>PROF</td><td>STU-018</td><td>SCH-003</td><td>61</td><td>16</td><td>OK</td></tr><tr><td>PROF</td><td>STU-019</td><td>SCH-006</td><td>63</td><td>22</td><td>OK</td></tr><tr><td>PROF</td><td>STU-019</td><td>SCH-010</td><td>70</td><td>27</td><td>OK</td></tr><tr><td>PROF</td><td>STU-019</td><td>SCH-012</td><td>65</td><td>30</td><td>OK</td></tr><tr><td>PROF</td><td>STU-019</td><td>SCH-010</td><td>70</td><td>27</td><td>OK</td></tr><tr><td>PROF</td><td>STU-020</td><td>SCH-006</td><td>25</td><td>41</td><td>OK</td></tr><tr><td>PROF</td><td>STU-020</td><td>SCH-007</td><td>31</td><td>42</td><td>OK</td></tr><tr><td>PROF</td><td>STU-020</td><td>SCH-002</td><td>63</td><td>22</td><td>OK</td></tr><tr><td>PROF</td><td>STU-021</td><td>SCH-009</td><td>42</td><td>50</td><td>OK</td></tr><tr><td>PROF</td><td>STU-021</td><td>SCH-002</td><td>40</td><td>20</td><td>OK</td></tr><tr><td>PROF</td><td>STU-021</td><td>SCH-002</td><td>40</td><td>20</td><td>OK</td></tr><tr><td>PROF</td><td>STU-022</td><td>SCH-003</td><td>30</td><td>33</td><td>OK</td></tr><tr><td>PROF</td><td>STU-022</td><td>SCH-002</td><td>56</td><td>43</td><td>OK</td></tr><tr><td>PROF</td><td>STU-022</td><td>SCH-004</td><td>69</td><td>30</td><td>OK</td></tr><tr><td>PROF</td><td>STU-023</td><td>SCH-002</td><td>31</td><td>27</td><td>OK</td></tr><tr><td>PROF</td><td>STU-023</td><td>SCH-003</td><td>48</td><td>26</td><td>OK</td></tr><tr><td>PROF</td><td>STU-023</td><td>SCH-008</td><td>25</td><td>51</td><td>OK</td></tr><tr><td>PROF</td><td>STU-023</td><td>SCH-005</td><td>27</td><td>18</td><td>OK</td></tr><tr><td>PROF</td><td>STU-024</td><td>SCH-002</td><td>28</td><td>24</td><td>OK</td></tr><tr><td>PROF</td><td>STU-024</td><td>SCH-005</td><td>51</td><td>53</td><td>OK</td></tr><tr><td>PROF</td><td>STU-025</td><td>SCH-001</td><td>36</td><td>50</td><td>OK</td></tr><tr><td>PROF</td><td>STU-025</td><td>SCH-012</td><td>29</td><td>18</td><td>OK</td></tr><tr><td>PROF</td><td>STU-025</td><td>SCH-005</td><td>39</td><td>33</td><td>OK</td></tr><tr><td>J2</td><td>STU-026</td><td>SCH-003</td><td>54</td><td>34</td><td>OK</td></tr><tr><td>J2</td><td>STU-027</td><td>SCH-010</td><td>77</td><td>15</td><td>OK</td></tr><tr><td>J2</td><td>STU-028</td><td>SCH-002</td><td>73</td><td>18</td><td>OK</td></tr><tr><td>J2</td><td>STU-029</td><td>SCH-003</td><td>33</td><td>19</td><td>OK</td></tr><tr><td>J2</td><td>STU-030</td><td>SCH-006</td><td>27</td><td>23</td><td>OK</td></tr><tr><td>J2</td><td>STU-031</td><td>SCH-009</td><td>72</td><td>20</td><td>OK</td></tr><tr><td>J2</td><td>STU-032</td><td>SCH-004</td><td>61</td><td>26</td><td>OK</td></tr><tr><td>J2</td><td>STU-033</td><td>SCH-001</td><td>52</td><td>31</td><td>OK</td></tr><tr><td>J2</td><td>STU-034</td><td>SCH-006</td><td>33</td><td>20</td><td>OK</td></tr><tr><td>J2</td><td>STU-035</td><td>SCH-001</td><td>54</td><td>19</td><td>OK</td></tr><tr><td>J2</td><td>STU-036</td><td>SCH-002</td><td>27</td><td>17</td><td>OK</td></tr><tr><td>J2</td><td>STU-037</td><td>SCH-004</td><td>32</td><td>44</td><td>OK</td></tr><tr><td>J1</td><td>STU-038</td><td>SCH-002</td><td>76</td><td>26</td><td>OK</td></tr><tr><td>J1</td><td>STU-039</td><td>SCH-001</td><td>66</td><td>16</td><td>OK</td></tr><tr><td>J1</td><td>STU-040</td><td>SCH-011</td><td>60</td><td>18</td><td>OK</td></tr><tr><td>J1</td><td>STU-041</td><td>SCH-003</td><td>71</td><td>18</td><td>OK</td></tr><tr><td>J1</td><td>STU-042</td><td>SCH-007</td><td>29</td><td>24</td><td>OK</td></tr><tr><td>J1</td><td>STU-043</td><td>SCH-002</td><td>64</td><td>18</td><td>OK</td></tr><tr><td>J1</td><td>STU-045</td><td>SCH-012</td><td>63</td><td>24</td><td>OK</td></tr><tr><td>J1</td><td>STU-046</td><td>SCH-001</td><td>66</td><td>19</td><td>OK</td></tr><tr><td>J1</td><td>STU-047</td><td>SCH-003</td><td>60</td><td>17</td><td>OK</td></tr><tr><td>J1</td><td>STU-048</td><td>SCH-009</td><td>70</td><td>20</td><td>OK</td></tr><tr><td>J1</td><td>STU-049</td><td>SCH-004</td><td>33</td><td>24</td><td>OK</td></tr><tr><td>J1</td><td>STU-050</td><td>SCH-012</td><td>41</td><td>18</td><td>OK</td></tr>
+</tbody>
+
+</table>
+
+</body>
+</html>

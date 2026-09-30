@@ -1,0 +1,98 @@
+STAGEPLAATSER v0.3 SIMULATIE
+==========================================
+Studenten:               50
+Scholen:                 12
+Regulier geplaatst:      39
+Regulier niet geplaatst: 1
+Profileringsverzoeken:   32
+Profilering geplaatst:   32
+Profilering niet geplaatst: 0
+Human Review:            1
+
+J4
+------------------------------------------
+STU-001 -> SCH-001 | OV 48 | fiets 39 | alternatieven 1 | OK
+STU-002 -> SCH-004 | OV 74 | fiets 18 | alternatieven 7 | OK
+STU-003 -> SCH-007 | OV 52 | fiets 34 | alternatieven 1 | OK
+STU-004 -> SCH-009 | OV 30 | fiets 46 | alternatieven 8 | OK
+STU-005 -> SCH-008 | OV 39 | fiets 15 | alternatieven 6 | OK
+STU-006 -> SCH-004 | OV 37 | fiets 21 | alternatieven 7 | OK
+STU-007 -> SCH-012 | OV 28 | fiets 18 | alternatieven 8 | OK
+STU-008 -> SCH-002 | OV 57 | fiets 20 | alternatieven 7 | OK
+STU-009 -> SCH-001 | OV 73 | fiets 19 | alternatieven 6 | OK
+STU-010 -> SCH-003 | OV 46 | fiets 28 | alternatieven 6 | OK
+
+LANG
+------------------------------------------
+STU-011 -> SCH-001 | OV 82 | fiets 24 | alternatieven 6 | OK
+STU-012 -> SCH-012 | OV 41 | fiets 17 | alternatieven 7 | OK
+STU-013 -> SCH-009 | OV 67 | fiets 22 | alternatieven 7 | OK
+STU-014 -> SCH-008 | OV 68 | fiets 41 | alternatieven 1 | REVIEW
+STU-015 -> SCH-002 | OV 64 | fiets 19 | alternatieven 7 | OK
+
+PROF
+------------------------------------------
+STU-016 -> SCH-004 | S1 PROF-06 | OV 35 | fiets 45 | OK
+STU-016 -> SCH-005 | S1 PROF-05 | OV 73 | fiets 30 | OK
+STU-016 -> SCH-010 | S2 PROF-02 | OV 30 | fiets 23 | OK
+STU-017 -> SCH-005 | S1 PROF-02 | OV 25 | fiets 37 | OK
+STU-017 -> SCH-001 | S1 PROF-07 | OV 59 | fiets 44 | OK
+STU-017 -> SCH-001 | S2 PROF-05 | OV 59 | fiets 44 | OK
+STU-018 -> SCH-003 | S1 PROF-03 | OV 61 | fiets 16 | OK
+STU-018 -> SCH-009 | S1 PROF-07 | OV 30 | fiets 45 | OK
+STU-018 -> SCH-003 | S2 PROF-02 | OV 61 | fiets 16 | OK
+STU-018 -> SCH-003 | S2 PROF-08 | OV 61 | fiets 16 | OK
+STU-019 -> SCH-006 | S1 PROF-06 | OV 63 | fiets 22 | OK
+STU-019 -> SCH-010 | S1 PROF-01 | OV 70 | fiets 27 | OK
+STU-019 -> SCH-012 | S2 PROF-01 | OV 65 | fiets 30 | OK
+STU-019 -> SCH-010 | S2 PROF-04 | OV 70 | fiets 27 | OK
+STU-020 -> SCH-006 | S1 PROF-04 | OV 25 | fiets 41 | OK
+STU-020 -> SCH-007 | S1 PROF-08 | OV 31 | fiets 42 | OK
+STU-020 -> SCH-002 | S2 PROF-06 | OV 63 | fiets 22 | OK
+STU-021 -> SCH-009 | S1 PROF-01 | OV 42 | fiets 50 | OK
+STU-021 -> SCH-002 | S2 PROF-02 | OV 40 | fiets 20 | OK
+STU-021 -> SCH-002 | S2 PROF-07 | OV 40 | fiets 20 | OK
+STU-022 -> SCH-003 | S1 PROF-03 | OV 30 | fiets 33 | OK
+STU-022 -> SCH-002 | S1 PROF-02 | OV 56 | fiets 43 | OK
+STU-022 -> SCH-004 | S2 PROF-05 | OV 69 | fiets 30 | OK
+STU-023 -> SCH-002 | S1 PROF-03 | OV 31 | fiets 27 | OK
+STU-023 -> SCH-003 | S1 PROF-07 | OV 48 | fiets 26 | OK
+STU-023 -> SCH-008 | S2 PROF-08 | OV 25 | fiets 51 | OK
+STU-023 -> SCH-005 | S2 PROF-05 | OV 27 | fiets 18 | OK
+STU-024 -> SCH-002 | S1 PROF-02 | OV 28 | fiets 24 | OK
+STU-024 -> SCH-005 | S2 PROF-05 | OV 51 | fiets 53 | OK
+STU-025 -> SCH-001 | S1 PROF-03 | OV 36 | fiets 50 | OK
+STU-025 -> SCH-012 | S2 PROF-02 | OV 29 | fiets 18 | OK
+STU-025 -> SCH-005 | S2 PROF-07 | OV 39 | fiets 33 | OK
+
+J2
+------------------------------------------
+STU-026 -> SCH-003 | OV 54 | fiets 34 | alternatieven 7 | OK
+STU-027 -> SCH-010 | OV 77 | fiets 15 | alternatieven 6 | OK
+STU-028 -> SCH-002 | OV 73 | fiets 18 | alternatieven 7 | OK
+STU-029 -> SCH-003 | OV 33 | fiets 19 | alternatieven 7 | OK
+STU-030 -> SCH-006 | OV 27 | fiets 23 | alternatieven 5 | OK
+STU-031 -> SCH-009 | OV 72 | fiets 20 | alternatieven 7 | OK
+STU-032 -> SCH-004 | OV 61 | fiets 26 | alternatieven 6 | OK
+STU-033 -> SCH-001 | OV 52 | fiets 31 | alternatieven 6 | OK
+STU-034 -> SCH-006 | OV 33 | fiets 20 | alternatieven 7 | OK
+STU-035 -> SCH-001 | OV 54 | fiets 19 | alternatieven 7 | OK
+STU-036 -> SCH-002 | OV 27 | fiets 17 | alternatieven 7 | OK
+STU-037 -> SCH-004 | OV 32 | fiets 44 | alternatieven 6 | OK
+
+J1
+------------------------------------------
+STU-038 -> SCH-002 | OV 76 | fiets 26 | alternatieven 7 | OK
+STU-039 -> SCH-001 | OV 66 | fiets 16 | alternatieven 6 | OK
+STU-040 -> SCH-011 | OV 60 | fiets 18 | alternatieven 7 | OK
+STU-041 -> SCH-003 | OV 71 | fiets 18 | alternatieven 8 | OK
+STU-042 -> SCH-007 | OV 29 | fiets 24 | alternatieven 6 | OK
+STU-043 -> SCH-002 | OV 64 | fiets 18 | alternatieven 6 | OK
+STU-045 -> SCH-012 | OV 63 | fiets 24 | alternatieven 8 | OK
+STU-046 -> SCH-001 | OV 66 | fiets 19 | alternatieven 8 | OK
+STU-047 -> SCH-003 | OV 60 | fiets 17 | alternatieven 8 | OK
+STU-048 -> SCH-009 | OV 70 | fiets 20 | alternatieven 7 | OK
+STU-049 -> SCH-004 | OV 33 | fiets 24 | alternatieven 8 | OK
+STU-050 -> SCH-012 | OV 41 | fiets 18 | alternatieven 7 | OK
+
+Niet geplaatst: ['STU-044']
